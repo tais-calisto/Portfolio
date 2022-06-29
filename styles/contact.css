@@ -1,0 +1,59 @@
+.contact{
+    background: linear-gradient(var(--color-purple-800) 50%, var(--color-purple-900));
+}
+
+.contact-container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: var( --color-pink-900);
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-container h3{
+    padding-bottom: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.email{
+    font-style: italic;
+}
+
+.contact-container ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container li{
+    padding: 0 0.5rem;
+}
+
+.contact-container a{
+    font-size: 2rem;
+    color: var(--color-purple-800);
+    transition: 0.3s all ease-in-out;
+}
+
+.contact-container a:hover{
+    color: var(--color-fonts-purple)
+}
+
+footer{
+    background-color: var(--color-purple-900);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media (min-width: 1024px){
+    .contact-container h3{
+        font-size: 1.4rem;
+    }
+
+    .contact-container{
+        width: 60%;
+    }
+}
