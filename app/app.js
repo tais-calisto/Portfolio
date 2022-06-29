@@ -72,17 +72,19 @@ menuIcons.forEach((icon) => {
 });
 
 //Toggle theme
-const toggleThemeBtn = document.querySelector(".toggle-theme");
-const themeIconEl = document.querySelector(".theme-icon");
+const toggleThemeBtn = document.querySelectorAll(".toggle-theme");
 
-toggleThemeBtn.addEventListener("click", () => {
-  document.documentElement.classList.toggle("light-theme");
-  if (document.documentElement.classList.contains("light-theme")) {
-    themeIconEl.innerHTML = `<i class="fa-solid fa-sun"></i>`;
-  } else {
-    themeIconEl.innerHTML = `<i class="fa-solid fa-moon"></i>`;
-  }
-});
+toggleThemeBtn.forEach((btn)=>{
+  btn.addEventListener("click", () => {
+    document.documentElement.classList.toggle("light-theme");
+    if (document.documentElement.classList.contains("light-theme")) {
+      btn.firstElementChild.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+    } else {
+      btn.firstElementChild.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+    }
+  });
+
+})
 
 //About Animation
 const elements = document.querySelectorAll("[data-animation]");
